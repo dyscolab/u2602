@@ -2,3 +2,28 @@
 channels = ["https://prefix.dev/conda-forge"]
 name = "u2602"
 platforms = ["linux-64", "osx-arm64", "win-64"]
+preview = ["pixi-build"]
+
+[environments]
+default = ["test"]
+
+[dependencies]
+symbolite = { path = "symbolite" }
+poincare = { path = "poincare" }
+
+[feature.test.dependencies]
+pytest = "*"
+pytest-mypy-testing = "*"
+cloudpickle = "<3.1.0"
+matplotlib = "*"
+numba = "*"
+ipywidgets = "*"
+ipykernel = "*"
+sympy = "*"
+
+[feature.test.target.unix.dependencies]
+jax = "*"
+
+[tasks]
+test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
+test-poincare = { cmd = "pytest --doctest-modules", cwd = "poincare" }
