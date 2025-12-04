@@ -1,0 +1,4 @@
+[workspace]
+channels = ["https://prefix.dev/conda-forge"]
+name = "u2602"
+platforms = ["linux-64", "osx-arm64", "win-64"]
