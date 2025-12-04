@@ -1,0 +1,6 @@
+[submodule "symbolite"]
+	path = symbolite
+	url = https://github.com/dyscolab/symbolite
+[submodule "poincare"]
+	path = poincare
+	url = https://github.com/dyscolab/poincare
