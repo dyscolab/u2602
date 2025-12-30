@@ -5,11 +5,12 @@ platforms = ["linux-64", "osx-arm64", "win-64"]
 preview = ["pixi-build"]
 
 [environments]
-default = ["test"]
+default = ["test", "simbio"]
 
 [dependencies]
 symbolite = { path = "symbolite" }
 poincare = { path = "poincare" }
+simbio = { path = "simbio" }
 
 [feature.test.dependencies]
 pytest = "*"
@@ -24,6 +25,11 @@ sympy = "*"
 [feature.test.target.unix.dependencies]
 jax = "*"
 
+[feature.simbio.pypi-dependencies]
+biomodels = "*"
+python-libsbml = "*"
+
 [tasks]
 test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
 test-poincare = { cmd = "pytest --doctest-modules", cwd = "poincare" }
+test-simbio = { cmd = "pytest --doctest-modules", cwd = "simbio" }

@@ -4,3 +4,6 @@
 [submodule "poincare"]
 	path = poincare
 	url = https://github.com/dyscolab/poincare
+[submodule "simbio"]
+	path = simbio
+	url = https://github.com/dyscolab/simbio
