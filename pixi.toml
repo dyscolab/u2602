@@ -28,6 +28,7 @@ jax = "*"
 [feature.simbio.pypi-dependencies]
 biomodels = "*"
 python-libsbml = "*"
+rebop = "*"
 
 [tasks]
 test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
