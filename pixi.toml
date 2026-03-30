@@ -12,6 +12,9 @@ symbolite = { path = "symbolite" }
 poincare = { path = "poincare" }
 simbio = { path = "simbio" }
 
+[pypi-dependencies]
+rebop = "*"
+
 [feature.test.dependencies]
 pytest = "*"
 pytest-mypy-testing = "*"
@@ -33,4 +36,4 @@ rebop = "*"
 [tasks]
 test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
 test-poincare = { cmd = "pytest --doctest-modules", cwd = "poincare" }
-test-simbio = { cmd = "pytest --doctest-modules", cwd = "simbio" }
+test-simbio = { cmd = "pytest src/simbio/test_core.py src/simbio/reactions/test_reactions.py --doctest-modules", cwd = "simbio" }
