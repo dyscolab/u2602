@@ -7,3 +7,6 @@
 [submodule "simbio"]
 	path = simbio
 	url = https://github.com/dyscolab/simbio
+[submodule "jablonski"]
+	path = jablonski
+	url = https://github.com/dyscolab/jablonski

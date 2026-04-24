@@ -11,6 +11,7 @@ default = ["test", "simbio"]
 symbolite = { path = "symbolite" }
 poincare = { path = "poincare" }
 simbio = { path = "simbio" }
+jablonski = { path = "jablonski" }
 
 [pypi-dependencies]
 rebop = "*"

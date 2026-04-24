@@ -142,7 +142,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/openldap-2.6.10-he970967_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/opt_einsum-3.4.0-pyhd8ed1ab_1.conda
-      - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/packaging-26.0-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/pandas-3.0.1-py313hbfd7664_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/parso-0.8.5-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pathspec-0.12.1-pyhd8ed1ab_1.conda
@@ -220,6 +220,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.23.0-pyhcf101f3_1.conda
       - conda: https://prefix.dev/conda-forge/linux-64/zlib-ng-2.3.2-h54a6638_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
+      - conda: jablonski
       - conda: poincare
       - conda: simbio
       - conda: symbolite
@@ -329,7 +330,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/osx-arm64/openjpeg-2.5.4-hbfb3c88_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/openssl-3.6.0-h5503f6c_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/opt_einsum-3.4.0-pyhd8ed1ab_1.conda
-      - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/packaging-26.0-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/pandas-3.0.1-py313h6974306_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/parso-0.8.5-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pathspec-0.12.1-pyhd8ed1ab_1.conda
@@ -382,6 +383,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.23.0-pyhcf101f3_1.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/zlib-ng-2.3.2-h248ca61_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
+      - conda: jablonski
       - conda: poincare
       - conda: simbio
       - conda: symbolite
@@ -494,7 +496,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/win-64/numpy-2.3.5-py312ha72d056_0.conda
       - conda: https://prefix.dev/conda-forge/win-64/openjpeg-2.5.4-h24db6dd_0.conda
       - conda: https://prefix.dev/conda-forge/win-64/openssl-3.6.0-h725018a_0.conda
-      - conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
+      - conda: https://prefix.dev/conda-forge/noarch/packaging-26.0-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/win-64/pandas-3.0.1-py312h95189c4_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/parso-0.8.5-pyhcf101f3_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/pathspec-0.12.1-pyhd8ed1ab_1.conda
@@ -554,6 +556,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/zipp-3.23.0-pyhcf101f3_1.conda
       - conda: https://prefix.dev/conda-forge/win-64/zlib-ng-2.3.2-h5112557_0.conda
       - conda: https://prefix.dev/conda-forge/win-64/zstd-1.5.7-h534d264_6.conda
+      - conda: jablonski
       - conda: poincare
       - conda: simbio
       - conda: symbolite
@@ -1643,6 +1646,17 @@ packages:
   - pkg:pypi/ipywidgets?source=hash-mapping
   size: 114376
   timestamp: 1762040524661
+- conda: jablonski
+  name: jablonski
+  version: 0.1.0
+  build: pyh4616a5c_0
+  subdir: noarch
+  variants:
+    target_platform: noarch
+  depends:
+  - python >=3.12
+  - python *
+  license: BSD-3-Clause
 - conda: https://prefix.dev/conda-forge/noarch/jax-0.7.2-pyhd8ed1ab_0.conda
   sha256: 571201d635839aaea8f0ce6896be44356c7db43b94c9d726dbaf94a6281c7195
   md5: 6aef584e5a851fd06737a29ec60cac39
@@ -4184,18 +4198,18 @@ packages:
   - pkg:pypi/opt-einsum?source=hash-mapping
   size: 62479
   timestamp: 1733688053334
-- conda: https://prefix.dev/conda-forge/noarch/packaging-25.0-pyh29332c3_1.conda
-  sha256: 289861ed0c13a15d7bbb408796af4de72c2fe67e2bcb0de98f4c3fce259d7991
-  md5: 58335b26c38bf4a20f399384c33cbcf9
+- conda: https://prefix.dev/conda-forge/noarch/packaging-26.0-pyhcf101f3_0.conda
+  sha256: c1fc0f953048f743385d31c468b4a678b3ad20caffdeaa94bed85ba63049fd58
+  md5: b76541e68fea4d511b1ac46a28dcd2c6
   depends:
   - python >=3.8
   - python
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/packaging?source=hash-mapping
-  size: 62477
-  timestamp: 1745345660407
+  - pkg:pypi/packaging?source=compressed-mapping
+  size: 72010
+  timestamp: 1769093650580
 - conda: https://prefix.dev/conda-forge/linux-64/pandas-3.0.1-py313hbfd7664_0.conda
   sha256: 01a14cb74d9773674d07ab250b70a7fbd140edfb19cf3ec2ba70147bdaec13d2
   md5: 1c8807728f0333228766dee685394e16
@@ -4596,7 +4610,7 @@ packages:
   timestamp: 1747339794916
 - conda: poincare
   name: poincare
-  version: 1.0.0
+  version: 1.1.0
   build: pyh4616a5c_0
   subdir: noarch
   variants:
@@ -4610,7 +4624,6 @@ packages:
   - scipy
   - tabulate
   - typing_extensions
-  - symbolite >=1.0.0
   - scipy-events >=0.3.1
   - pytest >=8.4.0,<9
   - statsmodels
@@ -5469,7 +5482,7 @@ packages:
   timestamp: 1738336634305
 - conda: simbio
   name: simbio
-  version: 1.0.1
+  version: 1.1.0
   build: pyh4616a5c_0
   subdir: noarch
   variants:
@@ -5567,15 +5580,15 @@ packages:
   timestamp: 1764983650145
 - conda: symbolite
   name: symbolite
-  version: 1.0.1
+  version: 1.1.0
   build: pyh4616a5c_0
   subdir: noarch
   variants:
     target_platform: noarch
   depends:
-  - typing_extensions >=4.15
   - python >=3.12
   - python *
+  - typing_extensions >=4.15
   license: MIT
 - conda: https://prefix.dev/conda-forge/noarch/sympy-1.14.0-pyh04b8f61_5.conda
   sha256: 60f18c60f6518254f0d28e4892e94c851cdbd650f7bd49899a6169f76cf6796b
