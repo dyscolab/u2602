@@ -38,3 +38,4 @@ rebop = "*"
 test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
 test-poincare = { cmd = "pytest --doctest-modules", cwd = "poincare" }
 test-simbio = { cmd = "pytest src/simbio/test_core.py src/simbio/reactions/test_reactions.py --doctest-modules", cwd = "simbio" }
+test-jablonski = { cmd = "pytest --doctest-modules", cwd = "jablonski" }
