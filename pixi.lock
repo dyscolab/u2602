@@ -1648,7 +1648,7 @@ packages:
   timestamp: 1762040524661
 - conda: jablonski
   name: jablonski
-  version: 0.1.0
+  version: 0.2.0
   build: pyh4616a5c_0
   subdir: noarch
   variants:
@@ -1656,6 +1656,7 @@ packages:
   depends:
   - python >=3.12
   - python *
+  - poincare >=1.1.1
   license: BSD-3-Clause
 - conda: https://prefix.dev/conda-forge/noarch/jax-0.7.2-pyhd8ed1ab_0.conda
   sha256: 571201d635839aaea8f0ce6896be44356c7db43b94c9d726dbaf94a6281c7195
@@ -4610,25 +4611,25 @@ packages:
   timestamp: 1747339794916
 - conda: poincare
   name: poincare
-  version: 1.1.0
+  version: 1.1.1
   build: pyh4616a5c_0
   subdir: noarch
   variants:
     target_platform: noarch
   depends:
+  - python >=3.12
+  - python *
   - numpy
   - pandas
   - xarray
   - pint-xarray
   - pint
   - scipy
+  - symbolite >=1.1.0
   - tabulate
   - typing_extensions
   - scipy-events >=0.3.1
-  - pytest >=8.4.0,<9
   - statsmodels
-  - python >=3.12
-  - python *
   license: MIT
 - pypi: https://files.pythonhosted.org/packages/a8/87/77cc11c7a9ea9fd05503def69e3d18605852cd0d4b0d3b8f15bbeb3ef1d1/pooch-1.8.2-py3-none-any.whl
   name: pooch
