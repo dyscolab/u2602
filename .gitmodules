@@ -10,3 +10,6 @@
 [submodule "jablonski"]
 	path = jablonski
 	url = https://github.com/dyscolab/jablonski
+[submodule "skills"]
+	path = skills
+	url = https://github.com/dyscolab/skills

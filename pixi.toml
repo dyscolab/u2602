@@ -41,3 +41,4 @@ test-symbolite = { cmd = "pytest --doctest-modules", cwd = "symbolite" }
 test-poincare = { cmd = "pytest --doctest-modules", cwd = "poincare" }
 test-simbio = { cmd = "pytest --doctest-modules", cwd = "simbio" }
 test-jablonski = { cmd = "pytest --doctest-modules", cwd = "jablonski" }
+test-skills = { cmd = "pytest tests/test_examples.py", cwd = "skills" }

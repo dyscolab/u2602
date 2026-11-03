@@ -13,6 +13,7 @@ library are immediately visible to the others.
 | [poincare/](poincare/) | Declarative ODE systems (`System`, `Variable`, `Parameter`, equations), compilation, simulation, units, reactions, analysis | symbolite |
 | [simbio/](simbio/) | Chemical reaction networks: compartments and volumes, reaction motifs, SBML/MathML I/O | poincare |
 | [jablonski/](jablonski/) | Photophysical state/transition models, spectra, quantum yields, excitation | poincare |
+| [skills/](skills/) | Agent skills for *users* of the libraries (`dyscolab-modeling`); not a Python package | poincare, simbio, jablonski (documents their released APIs) |
 
 Dependency direction: `symbolite → poincare → {simbio, jablonski}`. simbio and
 jablonski do not depend on each other.
@@ -21,7 +22,8 @@ jablonski do not depend on each other.
 
 **Read that submodule's `AGENTS.md` before you modify anything in it**
 ([symbolite](symbolite/AGENTS.md), [poincare](poincare/AGENTS.md),
-[simbio](simbio/AGENTS.md), [jablonski](jablonski/AGENTS.md)). Each one
+[simbio](simbio/AGENTS.md), [jablonski](jablonski/AGENTS.md),
+[skills](skills/AGENTS.md)). Each one
 covers the architecture, invariants, commands and downstream consumers of
 its repository. If a change spans several submodules, read all the
 affected ones.
@@ -72,6 +74,10 @@ nothing about this workspace. Inside this workspace, apply them like this:
   - symbolite → `pixi run test-symbolite`, `test-poincare`, `test-simbio`, `test-jablonski`
   - poincare → `pixi run test-poincare`, `test-simbio`, `test-jablonski`
   - simbio or jablonski → their own task only
+- **Skills:** when a *public* API of poincare, simbio or jablonski changes, update the
+  skill on the `dev` branch of `skills/` and run `pixi run test-skills` (examples against
+  the development sources). `skills/main` documents the released versions only and changes
+  at skill releases (see [skills/AGENTS.md](skills/AGENTS.md)).
 - Downstream packages import many "private" upstream modules
   (`symbolite.core.*`, `symbolite.impl._lang_value_utils`, `poincare._node`,
   `poincare.reactions.reactions`). Grep the downstream `src/` directories
