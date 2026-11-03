@@ -26,6 +26,7 @@ numba = "*"
 ipywidgets = "*"
 ipykernel = "*"
 sympy = "*"
+nbformat = ">=5.11.1,<6"
 
 [feature.test.target.unix.dependencies]
 jax = "*"
